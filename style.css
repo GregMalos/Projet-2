@@ -1,0 +1,54 @@
+body, * {
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+} 
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY('0deg');
+}
+
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 180px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px liner-grdient(transparent,transparent, #0004);
+}
+
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+body, * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    background-color: peru;
+    padding: 10px;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    margin-top: -10px;
+}
